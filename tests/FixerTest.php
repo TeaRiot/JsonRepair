@@ -29,13 +29,13 @@ class FixerTest extends TestCase
     //  Pass-through: valid JSON stays intact
     // ════════════════════════════════════════════════════════════════════
 
-    /** @dataProvider validJsonProvider */
+    #[\PHPUnit\Framework\Attributes\DataProvider('validJsonProvider')]
     public function testValidJsonPassthrough(string $json): void
     {
         $this->assertSame($json, $this->fix($json));
     }
 
-    public function validJsonProvider(): iterable
+    public static function validJsonProvider(): iterable
     {
         yield 'empty object'     => ['{}'];
         yield 'empty array'      => ['[]'];

@@ -15,7 +15,10 @@
         "jsonp",
         "comments",
         "python",
-        "mongodb"
+        "mongodb",
+        "extract",
+        "template",
+        "llm"
     ],
     "license": "MIT",
     "authors": [
@@ -26,9 +29,9 @@
     ],
     "require": {
         "php": ">=8.0",
+        "ext-ctype": "*",
         "ext-json": "*",
-        "ext-mbstring": "*",
-      "ext-ctype": "*"
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.6 || ^10.0"

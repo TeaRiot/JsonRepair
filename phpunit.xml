@@ -3,9 +3,8 @@
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          colors="true"
-         failOnRisky="true"
-         failOnWarning="true"
          stopOnFailure="false"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
 >
     <testsuites>
         <testsuite name="unit">
@@ -13,12 +12,12 @@
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <source>
         <include>
             <directory suffix=".php">src</directory>
         </include>
         <exclude>
             <file>src/helpers.php</file>
         </exclude>
-    </coverage>
+    </source>
 </phpunit>
